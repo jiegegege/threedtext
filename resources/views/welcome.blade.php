@@ -106,7 +106,7 @@
                 <input type="text" class="form-control" id="backText" name="back" value="{{ old('back') }}" onchange="changeText(3)">
             </div>
         </div>
-        <div style="width: 40%;margin: auto; float: left">
+        <div style="width: 40%;margin-left: 20px; float: left">
             <div class="input-group">
                 <span class="input-group-addon">
                     <input type="checkbox" class="textCheckbox1" checked="true">
@@ -187,9 +187,9 @@
 </body>
     <!-- 生成点状文字 -->
     <script type="text/javascript">
-        var time = 10;
-        var interval=0;
-        function yulan(){
+        var time = 15;
+        var interval=0;//定时器的返回值
+        function yulan(){//实现预览按钮点击事件
             clearInterval(interval);
 
             var imgDiv=document.getElementsByClassName('imgDiv');
@@ -212,13 +212,12 @@
             getDzText(back.value, 'back');
 
             var speed=document.getElementById('preRange').value;
-            speed=speed/1.4
             copy(speed);
             interval = setInterval('myScroll('+speed+')', time);
 
         }
 
-        function changeText(num){
+        function changeText(num){//同步改变复选框中选择的文本的值
             var textCheckbox=document.getElementsByClassName('textCheckbox');
             var idname=['preText','leftText','rightText','backText'];
             var textvalue=document.getElementById(idname[num]).value;
@@ -231,7 +230,7 @@
             }
         }
 
-        function rangeChange(num){
+        function rangeChange(num){//同步改变复选框中的速度的值
             var textCheckbox=document.getElementsByClassName('textCheckbox1');
             var idname=['preRange','leftRange','rightRange','backRange'];
             var rangevalue=document.getElementById(idname[num]).value;

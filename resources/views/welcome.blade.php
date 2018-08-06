@@ -112,32 +112,32 @@
                     <input type="checkbox" class="textCheckbox1" checked="true">
                 </span>
                 <span class="input-group-addon" >正面速度</span>
-                <input id="preRange" min="0" max="20" type="range" name="points" onchange="rangeChange(0)" />
-                <span class="input-group-addon  spanSpeed" >10</span>
+                <input id="preRange" min="0" max="10" type="range" name="points" onchange="rangeChange(0)" />
+                <span class="input-group-addon  spanSpeed" >5</span>
             </div>
             <div class="input-group">
                 <span class="input-group-addon">
                     <input type="checkbox" class="textCheckbox1" checked="true">
                 </span>
                 <span class="input-group-addon" >左面速度</span>
-               <input id="leftRange" min="0" max="20" type="range" name="points" onchange="rangeChange(1)"/>
-               <span class="input-group-addon spanSpeed" >10</span>
+               <input id="leftRange" min="0" max="10" type="range" name="points" onchange="rangeChange(1)"/>
+               <span class="input-group-addon spanSpeed" >5</span>
             </div>
             <div class="input-group">
                 <span class="input-group-addon">
                     <input type="checkbox" class="textCheckbox1" checked="true">
                 </span>
                 <span class="input-group-addon" >右面速度</span>
-                <input id="rightRange" min="0" max="20" type="range" name="points" onchange="rangeChange(2)"/>
-                <span class="input-group-addon spanSpeed" >10</span>
+                <input id="rightRange" min="0" max="10" type="range" name="points" onchange="rangeChange(2)"/>
+                <span class="input-group-addon spanSpeed" >5</span>
             </div>
             <div class="input-group">
                 <span class="input-group-addon">
                     <input type="checkbox" class="textCheckbox1" checked="true">
                 </span>
                 <span class="input-group-addon" >后面速度</span>
-                <input id="backRange" min="0" max="20" type="range" name="points" onchange="rangeChange(3)"/>
-                <span class="input-group-addon spanSpeed" >10</span>
+                <input id="backRange" min="0" max="10" type="range" name="points" onchange="rangeChange(3)"/>
+                <span class="input-group-addon spanSpeed" >5</span>
             </div>
         </div>
         <div class="modal-footer" style="float: left">
@@ -183,11 +183,11 @@
             </div>
         </div>
     </span> 
-    <canvas id="myCanvas" width="93px" height="93px" style="visibility:hidden">您的浏览器不支持 HTML5 canvas 标签。</canvas>
+    <canvas id="myCanvas" width="93px" height="93px" >您的浏览器不支持 HTML5 canvas 标签。</canvas>
 </body>
     <!-- 生成点状文字 -->
     <script type="text/javascript">
-        var time = 15;
+        var time = 20;
         var interval=0;//定时器的返回值
         function yulan(){//实现预览按钮点击事件
             clearInterval(interval);
